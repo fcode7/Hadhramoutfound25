@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مؤسسة حضرموت - تنمية بشرية</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="assets/webfonts/css2.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/all.min.css">
+</head>
+</head>
+<body>
+
+    <header id="main-nav">
+        <div class="header-container">
+            <div class="logos-group">
+            </div>
+            <nav class="nav-links">
+                <a href="#home" class="nav-item active" data-target="main-view">الرئيسية</a>
+                <a href="#about" class="nav-item" data-target="main-view">المؤسسة</a>
+                <a href="#dashboard" class="nav-item" data-target="dashboard-view">الإحصائيات</a>
+                <a href="#graduates" class="nav-item" data-target="graduates-view">الخريجين</a>
+            </nav>
+            <div class="nav-actions">
+                <div class="logo"></div>
+                <div class="logos-group">
+                <div class="logo"><img src="images/logo4.png" alt=""></div>
+                <div class="logo"><img src="images/logo3.png" alt=""></div>
+                <div class="logo"><img src="images/logo2.png" alt=""></div>
+                <div class="logo"><img src="images/logo1.png" alt=""></div>
+            </div>
+            </div>
+            <div class="menu-btn" onclick="toggleMobileMenu()">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <div id="main-view" class="view-section active">
+        <section id="home" class="container hero">
+            <div class="hero-content animate-on-scroll">
+                <h1>مؤسسة حضرموت <br> <span class="gold-text">تنمية بشرية</span></h1>
+                <p>نعمل على تمكين العقول الطموحة من خلال توفير بيئة سكنية تعليمية آمنة ومحفزة، لنصنع جيلاً من القادة المبدعين في مختلف المجالات العلمية.</p>
+                <div class="hero-img animate-on-scroll delay-1">
+                    <div class="img-wrapper">
+                        <img src="images/H3.jpeg" alt="المبنى الرئيسي">
+                        <div class="glass-tag">"مؤسسة رائدة في المجال التعليمي والإداري"</div>
+                    </div>
+                </div>
+                <br>
+                <br>
+                <div class="hero-btns">
+                    <a href="#" class="btn btn-main" onclick="goToPage('graduates-view'); return false;">
+                        <i class="fas fa-graduation-cap"></i> تصفح الخريجين
+                    </a>
+                    
+                    <a href="#" class="btn btn-sub" onclick="goToPage('dashboard-view'); return false;">
+                        عرض الإحصائيات
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="container">
+            <div class="about-flex">
+                <div class="about-img-group animate-on-scroll">
+                    <img src="images/H1.jpeg" alt="طلاب" class="img-1">
+                    <img src="images/H5.jpeg" alt="تخرج" class="img-2">
+                </div>
+                <div class="about-text-box animate-on-scroll delay-1" style="text-align: center;">
+                    <h2 class="section-heading">عن المؤسسة</h2>
+                    <p class="about-desc">تأسست مؤسسة حضرموت تنمية بشرية لتكون الحاضنة الأولى للمتميزين، موفرة أكثر من مجرد مأوى؛ بل مجتمعاً أكاديمياً متكاملاً يدعم الطالب في رحلته الجامعية من خلال مرافق حديثة وبرامج إثرائية مستمرة.</p>
+                    <br>
+                    <div class="features-flex">
+                        <div class="feature-card"><i class="fas fa-shield-alt"></i> <b class="badge-light">أمان تام</b></div>
+                        <br>
+                        <div class="feature-card"><i class="fas fa-wifi"></i> <b class="badge-light">تقنية متطورة</b></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="centers" class="container" style="background-color: var(--bg-light); border-radius: 40px; padding: 40px 20px; margin-bottom: 80px;">
+            <div class="section-title animate-on-scroll">
+                <h2>مراكزنا الطلابية</h2>
+                <p>تقدم مرافق متخصصة تلبي احتياجات الطلاب والطالبات</p>
+            </div>
+            <div class="centers-grid">
+                <div class="card animate-on-scroll delay-2">
+                    <div class="card-img-overflow"><img src="images/صورة مركز أحمد.png" alt="مركز أحمد"></div>
+                    <div class="card-body">
+                        <span class="badge">للطلاب</span>
+                        <h3>مركز أحمد للطالب الجامعي</h3>
+                        <p>التابع لمؤسسة حضرموت - تنمية بشرية</p>
+                        <button class="explore-btn" onclick="switchView('ahmed-view')">استكشف المركز <i class="fas fa-arrow-left"></i></button>
+                        <br>
+                    </div>
+                </div>
+                <div class="card animate-on-scroll delay-1">
+                    <div class="card-img-overflow"><img src="images/KH1.jpeg" alt="مركز خديجة"></div>
+                    <div class="card-body">
+                        <span class="badge">للطالبات</span>
+                        <h3>مركز خديجة للطالبات</h3>
+                        <p>التابع لمؤسسة حضرموت - تنمية بشرية</p>
+                        <button class="explore-btn" onclick="switchView('khadija-view')">استكشف المركز <i class="fas fa-arrow-left"></i></button>
+                        <br>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <div id="ahmed-view" class="view-section">
+        <section class="center-hero ahmed-bg">
+            <div class="center-hero-content animate-on-scroll">
+                <h1>مركز أحمد للطالب الجامعي</h1>
+                <p>بيئة تعليمية متكاملة ومركز متميز لطلاب مؤسسة حضرموت المبدعين</p>
+                <div class="hero-btns justify-center" style="margin-top: 30px;">
+                    <a href="#ahmed-facilities" class="btn btn-white">استكشف المرافق</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="container" style="padding-top: 80px;">
+            <div class="about-flex align-start">
+                <div class="about-img-box animate-on-scroll shadow-img">
+                    <img src="images/إدارة.jpeg" alt="غرفة">
+                </div>
+                <div class="about-text-box animate-on-scroll delay-1" style="text-align: center;">
+                    <span class="small-title">عن المركز</span>
+                    <h2 class="section-heading">رسالتنا في دعم مسيرة الطالب الجامعي</h2>
+                    <p class="about-desc">يعد مركز أحمد للطالب الجامعي من المراكز الأكاديمية الرائدة التي توفر للطلاب بيئة سكنية وتعليمية متميزة تساعدهم على التركيز في دراستهم وتطوير مهاراتهم الشخصية، نحن لا نوفر مجرد سكن، بل نبني مجتمعاً علمياً متكاملاً.</p>
+                    <div class="stats-row">
+                        <div class="stat-box"><h3>+2</h3><p>أمن وحراسة</p></div>
+                        <div class="stat-box"><h3>80+</h3><p>طالب مقيم</p></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="ahmed-facilities" class="container" style="text-align: center;">
+            <div class="section-title animate-on-scroll">
+                <h2>مرافق المركز</h2>
+                <p>تجهيزات عالمية المستوى لخدمة احتياجات الطلاب</p>
+            </div>
+            <div class="facilities-grid-ahmed animate-on-scroll delay-1">
+                <img src="images/إدارة.jpeg" class="f-large" alt="إدارة">
+                <img src="images/إستقبال.jpeg" class="f-small" alt="إستقبال">
+                <img src="images/سنتر.jpeg" class="f-medium" alt="سنتر">
+                <img src="images/مكتبة.jpeg" class="f-small" alt="مكتبة">
+            </div>
+        </section>
+    </div>
+
+    <div id="khadija-view" class="view-section">
+        <section class="center-hero khadija-bg">
+            <div class="center-hero-content animate-on-scroll">
+                <h1>مركز خديجة للطالبات</h1>
+                <p>بيئة آمنة ومحفزة لتمكين الطالبات من تحقيق التميز الأكاديمي والنمو الشخصي</p>
+                <div class="hero-btns justify-center" style="margin-top: 30px;">
+                    <a href="#khadija-facilities" class="btn btn-white">استكشف المرافق</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="container" style="padding-top: 80px;">
+            <div class="about-flex align-start flex-reverse">
+                <div class="about-img-box animate-on-scroll dark-box">
+                    <div class="sun-circle"></div>
+                    <h2>ABOUT<br>THE<br>CENTER</h2>
+                    <div class="orange-badge">25+ عاماً من التميز</div>
+                </div>
+                <div class="about-text-box animate-on-scroll delay-1" style="text-align: center;">
+                    <span class="small-title">عن المركز</span>
+                    <h2 class="section-heading">بيئة تمكينية متكاملة لطالبات المستقبل</h2>
+                    <p class="about-desc">يعد مركز خديجة للطالبات أكثر من مجرد سكن للطالبات، إنه مجتمع متكامل صمم خصيصاً ليوفر للطالبة الجامعية بيئة منزلية دافئة تدعم رحلتها التعليمية.</p>
+                    <div class="features-list-vertical">
+                        <div class="f-item"><i class="fas fa-shield-check"></i><div><h4>أمان تام</h4><p>حراسة أمنية على مدار الساعة.</p></div></div>
+                        <div class="f-item"><i class="fas fa-book-reader"></i><div><h4>دعم أكاديمي</h4><p>مساحات مخصصة للمذاكرة الهادئة.</p></div></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="khadija-facilities" class="container" style="text-align: center;">
+            <div class="section-title animate-on-scroll">
+                <h2>مرافق المركز</h2>
+                <p>تصميم أنيق يجمع بين الرفاهية والعملية، لنمط حياة جامعي متميز</p>
+            </div>
+            <div class="facilities-grid-khadija animate-on-scroll delay-1">
+                <div class="f-card"><img src="images/KH2.jpeg" alt="قاعة"><div class="f-overlay">قاعات تدريبية</div></div>
+                <div class="f-card"><img src="images/KH3.jpeg" alt="إدارة"><div class="f-overlay">إدارة متكاملة</div></div>
+                <div class="f-card"><img src="images/KH4.jpeg" alt="مكتبة"><div class="f-overlay">مكتبة هادئة</div></div>
+                <div class="f-card"><img src="images/KH5.jpeg" alt="غرف"><div class="f-overlay">غرف متميزة</div></div>
+            </div>
+        </section>
+        
+        <section class="dark-green-section">
+            <div class="container">
+                <div class="section-title animate-on-scroll"><h2 class="white-text">خدمات الرعاية الشاملة</h2><p class="white-text" style="opacity:0.8;">من توفير التفاصيل اليومية لراحة الطالبات</p></div>
+                <div class="services-4-grid">
+                    <div class="s-card-dark"><i class="fas fa-utensils"></i><h3>تغذية متوازنة</h3></div>
+                    <div class="s-card-dark"><i class="fas fa-bus"></i><h3>نقل ترددي</h3></div>
+                    <div class="s-card-dark"><i class="fas fa-clock"></i><h3>أمن دائم</h3></div>
+                    <div class="s-card-dark"><i class="fas fa-heartbeat"></i><h3>الخدمات الصحية</h3></div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <div id="graduates-view" class="view-section">
+        <section class="container" style="padding-top: 120px;">
+            
+            <div class="graduates-hero animate-on-scroll">
+                <div class="grad-hero-text">
+                    <span class="gold-subtitle">بصمة المستقبل</span>
+                    <h1 class="primary-heading">دليل خريجي<br>المراكز الطلابية</h1>
+                    <p>نحتفي بنجاحات طلابنا الذين اتخذوا من سكناتنا منطلقاً لطموحاتهم. استكشف مسارات المبدعين وتواصل مع شبكة واسعة من القادة في مختلف التخصصات.</p>
+                </div>
+                <div class="grad-hero-img">
+                    <img src="images/H4.jpeg" alt="خريجين">
+                    <div class="floating-stats-card">
+                        <strong>600+</strong>
+                        <span>خريج متميز منذ التأسيس</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section-title animate-on-scroll">
+                <h2>إستكشف خريجينا لهذا العام</h2>
+                <p>خريجي مركز أحمد وخديجة</p>
+            </div>
+            <div class="filters-bar animate-on-scroll delay-1">
+                <div class="search-input-box">
+                    <i class="fas fa-search"></i>
+                    <input type="text" id="searchInput" onkeyup="filterAlumni()" placeholder="ابحث عن اسم الخريج، التخصص...">
+                </div>
+                
+                <select id="majorFilter" class="filter-select" onchange="filterAlumni()">
+                    <option value="all">كل التخصصات</option>
+                    <option value="هندسة">كلية الهندسة والبترول</option>
+                    <option value="طب">طلية الطب والعلوم الصحية</option>
+                    <option value="حاسوب">كلية الحاسبات وتقنية المعلومات</option>
+                    <option value="محاسبة">كلية الالآداب والعلوم الصحية</option>
+                </select>
+                
+                <select id="centerFilter" class="filter-select" onchange="filterAlumni()">
+                    <option value="all">كل السكنات</option>
+                    <option value="مركز أحمد">مركز أحمد</option>
+                    <option value="مركز خديجة">مركز خديجة</option>
+                </select>
+            </div>
+
+            <div class="alumni-grid animate-on-scroll delay-2" id="alumni-grid">
+                <div class="alumni-card">
+                    <div class="alumni-img-wrapper"><img src="images/احمد الصاعي.jpg" alt="أحمد"></div>
+                    <div class="alumni-info"><h3>أحمد عمر محفوظ الصاعي<i class="fas fa-check-circle verified-icon"></i></h3><p class="alumni-major"><i class="fas fa-graduation-cap"></i> هندسة مدنية</p><p class="alumni-location"><i class="fas fa-map-marker-alt"></i> مركز أحمد لللطالب الجامعي</p><button class="btn-profile" onclick="openAlumniModal('أحمد عمر محفوظ الصاعي', 'هندسة مدنية', '2026', 'مركز أحمد', '24', 'ذكر', 'images/احمد الصاعي.jpg',`من هنا بدأت الحكاية…
+            لم يكن مجرد مركز، بل نقطة تحوّل غيّرت مساري للأفضل.
+            في مركز أحمد للطالب الجامعي تعلّمت، تطوّرت، واكتشفت نفسي من جديد.`)">عرض الملف الشخصي</button></div>
+                </div>
+                <div class="alumni-card">
+                    <div class="alumni-img-wrapper"><img src="images/WA_64سعيد باهرمز 5.jpeg" alt="سعيد"></div>
+                    <div class="alumni-info"><h3>سعيد عادل محمد باهرمز<i class="fas fa-check-circle verified-icon"></i></h3><p class="alumni-major"><i class="fas fa-stethoscope"></i>هندسة معمارية</p><p class="alumni-location"><i class="fas fa-map-marker-alt"></i>مركز أحمد لللطالب الجامعي</p><button class="btn-profile" onclick="openAlumniModal('سعيد عادل محمد باهرمز', 'هندسة معمارية', '2026', 'مركز أحمد', '25', 'ذكر', 'images/WA_64سعيد باهرمز 5.jpeg',`أقف اليوم في نهاية مرحلة وبداية أُخرى،
+            وأحمل معي فضلاً لا يُنسى لمن كانوا دائماً بجانبي.`)">عرض الملف الشخصي</button></div>
+                </div>
+                <div class="alumni-card">
+                    <div class="alumni-img-wrapper"><img src="images/محمد ‪بن حليمان.jpg" alt="محمد"></div>
+                    <div class="alumni-info"><h3>محمد عبدالله محمد بن حليمان<i class="fas fa-check-circle verified-icon"></i></h3><p class="alumni-major"><i class="fas fa-drafting-compass"></i>إدارة أعمال</p><p class="alumni-location"><i class="fas fa-map-marker-alt"></i>مركز أحمد لللطالب الجامعي</p><button class="btn-profile" onclick="openAlumniModal('محمد عبدالله محمد بن حليمان', 'إدارة أعمال', '2026', 'مركز أحمد', '25', 'ذكر', 'images/محمد ‪بن حليمان.jpg',`على أعتاب الوداع، نقف اليوم أكثر نضجاً ويقيناً بعد سنوات صنعت منا ما نحن عليه.
+            ونمضي بفخر نحو الغد، حاملين أثرَ أيام صنعت البدايات ومهّدت طريق المستقبل.
+            ويبقى فينا أثرُ مكان احتوانا، وغرس علماً وقيماً لا تزول.`)">عرض الملف الشخصي</button></div>
+                </div>
+                <div class="alumni-card">
+                    <div class="alumni-img-wrapper"><img src="images/محمد ‪باعوض.jpg" alt="محمد"></div>
+                    <div class="alumni-info"><h3>محمد عوض كرامة باعوض<i class="fas fa-check-circle verified-icon"></i></h3><p class="alumni-major"><i class="fas fa-chart-pie"></i>مختبرات طبية</p><p class="alumni-location"><i class="fas fa-map-marker-alt"></i>مركز أحمد لللطالب الجامعي</p><button class="btn-profile" onclick="openAlumniModal('محمد عوض كرامة باعوض', 'مختبرات طبية', '2026', 'مركز أحمد', '24', 'ذكر', 'images/محمد ‪باعوض.jpg',`أهدي هذا التخرج إلى أبي وتاج رأسي الأستاذ عوض كرامة باعوض ولأمي منى مبارك عميرة ولأخوتي هاني و إكرامي   و وهبي ولأختي الملكة ، وكذلك لزوجة أبي ولأخي أحمد وأختي رمز الوفاء وأيضاً لكل عائلتي ولكل من ساندني في اتمامي لمرحلة البكالاريوس للمختبرات الطبية للعام 2025-2026
+            واسأل من الله تعالى أن أكون عند حسن ظن أهلي ومن أحسن الظن بنا ونرجو التوفيق والقبول لهم ولنا وللأمة أجمع .`)">عرض الملف الشخصي</button></div>
+                </div>
+
+                <div class="alumni-card hidden-card">
+                    <div class="alumni-img-wrapper"><img src="images/DSC_0105 مبارك بلجهر 1.jpg" alt="مبارك"></div>
+                    <div class="alumni-info"><h3>مبارك أحمد محمد بلجهر<i class="fas fa-check-circle verified-icon"></i></h3><p class="alumni-major"><i class="fas fa-laptop-code"></i>هندسة معمارية</p><p class="alumni-location"><i class="fas fa-map-marker-alt"></i>مركز أحمد لللطالب الجامعي</p><button class="btn-profile" onclick="openAlumniModal('مبارك أحمد محمد بلجهر', 'هندسة معمارية', '2026', 'مركز أحمد', '23', 'ذكر', 'images/DSC_0105 مبارك بلجهر 1.jpg',`إلى أمي المتوفية الغائبة الحاضرة في قلبي، وإلى أبي الغالي، وإلى أحبائي، أهديهم واشاركهم فرحتي بتخرجي، وأسأل الله أن يجعل هذا النجاح فخراً لي ولكم جميعاً`)">عرض الملف الشخصي</button></div>
+                </div>
+                <div class="alumni-card hidden-card">
+                    <div class="alumni-img-wrapper"><img src="images/اسامة باجهام.jpg" alt="أسامة"></div>
+                    <div class="alumni-info"><h3>أسامة سالم عبيد باجهام<i class="fas fa-check-circle verified-icon"></i></h3><p class="alumni-major"><i class="fas fa-flask"></i>هندسة مدنية</p><p class="alumni-location"><i class="fas fa-map-marker-alt"></i>مركز أحمد لللطالب الجامعي</p><button class="btn-profile" onclick="openAlumniModal('أسامة سالم عبيد باجهام', 'هندسة مدنية', '2026', 'مركز أحمد', '24', 'ذكر', 'images/اسامة باجهام.jpg',`أيامٌ شَتّى مَضت تحتَ سَقفِ صَرحٍ حَوى أَحلامُنا، صغِيرُها قبلَ كبِيرها .
+            ونَحنُ على عَتباتِ الرحِيل ...
+            سَنرحل؛ ولكنَ أَثرُنا باقٍ ومَنّحوتٍ في قلوبِ أُناسٍ كانوا وسَيبقوّا جُزءًا مِن أروحِنا .
+            وكيفَ لِروحٍ أنَّ تَذهبَ وتَترُك بَعضًا مِنّها دَون أنّ تَحزن؟!`)">عرض الملف الشخصي</button></div>
+                </div>
+                <div class="alumni-card hidden-card">
+                    <div class="alumni-img-wrapper"><img src="images/المهندس مجيب باظريس.png" alt="مجيب"></div>
+                    <div class="alumni-info"><h3>مجيب مجيد محمد باضريس<i class="fas fa-check-circle verified-icon"></i></h3><p class="alumni-major"><i class="fas fa-balance-scale"></i> هندسة إلكترونية واتصالات</p><p class="alumni-location"><i class="fas fa-map-marker-alt"></i>مركز أحمد لللطالب الجامعي</p><button class="btn-profile" onclick="openAlumniModal('مجيب مجيد محمد باضريس', 'هندسة إلكترونية واتصالات', '2026', 'مركز أحمد', '24', 'ذكر', 'images/المهندس مجيب باظريس.png',`الحمدلله على تمام النعمة واكتمال الفرحة.
+            لحظةٌ كنتُ أحلم بها، وها أنا أعيشها اليوم بكل فخر.
+            وبكل فخرٍ أهدي تخرّجي إلى والديّ اللذين كانا عونًا وسندًا لي بعد الله بدعائهما ودعمهما، وإلى إخوتي وأصدقائي الذين كانوا معي في كل خطوةٍ سندًا لا يميل.`)">عرض الملف الشخصي</button></div>
+                </div>
+                <div class="alumni-card hidden-card">
+                    <div class="alumni-img-wrapper"><img src="images/حسن ‪باللعمش_١١٥٦٠٦.jpg" alt="حسن"></div>
+                    <div class="alumni-info"><h3>حسن عمر أحمد باللعمش<i class="fas fa-check-circle verified-icon"></i></h3><p class="alumni-major"><i class="fas fa-language"></i> هندسة بترولية</p><p class="alumni-location"><i class="fas fa-map-marker-alt"></i>مركز أحمد لللطالب الجامعي</p><button class="btn-profile" onclick="openAlumniModal('حسن عمر أحمد باللعمش', 'هندسة بترولية ', '2026', 'مركز أحمد', '24', 'ذكر', 'images/حسن ‪باللعمش_١١٥٦٠٦.jpg',`الحمد لله الذي بنعمته تتم الصالحات وبتوفيقه تُنال الغايات، أهدي ثمرة جهدي لوالديّ الكريمين رمز العطاء ، ولإخواني الذين كانوا لي خير سند وعضد . لولا فضل الله ثم دعمكم اللامحدود لما اكتملت فرحة هذا الإنجاز`)">عرض الملف الشخصي</button></div>
+                </div>
+                <div class="alumni-card hidden-card">
+                    <div class="alumni-img-wrapper"><img src="images/عبدالرحمن ‪الجفري2.jpg" alt="عبدو"></div>
+                    <div class="alumni-info"><h3>عبدالرحمن هادي عبدالرحمن الجفري<i class="fas fa-check-circle verified-icon"></i></h3><p class="alumni-major"><i class="fas fa-language"></i> هندسة مدنية</p><p class="alumni-location"><i class="fas fa-map-marker-alt"></i>مركز أحمد لللطالب الجامعي</p><button class="btn-profile" onclick="openAlumniModal('عبدالرحمن هادي عبدالرحمن الجفري', 'هندسة مدنية ', '2026', 'مركز أحمد', '24', 'ذكر', 'images/عبدالرحمن ‪الجفري2.jpg',`تخرجي اليوم ما هو إلا قصة حبٍ عظيمة كتبتها قلوبكم معي…
+            أبي: يا عزوتي وسندي، كنت الأمان الذي لا يخيب، والقوة التي تحملني كلما ضعفت.
+            أمي: يا نبض قلبي ودعائي الجميل، بكِ كانت الأيام تهون، وبكِ وصل هذا الحلم.
+            إخواني: يا ظهرِي الذي لا ينكسر، ورفقة دربي التي منحتني القوة كلما تعثرت.
+            أختي: يا قطعة من روحي، كنتِ الأمل واللطف في كل لحظة تعب.
+            ومركز أحمد: هنا كبر الحلم، وهنا صُقلت مواهبنا حتى أصبح الواقع أجمل مما تمنينا.
+            لكم جميعًا… حبٌ لا يُقال، وفضلٌ لا يُنسى، فهذا الإنجاز أنتم قبله وبعده.`)">عرض الملف الشخصي</button></div>
+                </div>
+                <div class="alumni-card hidden-card">
+                    <div class="alumni-img-wrapper"><img src="images/عبدالرحمن ‪باخريصة.jpg" alt="عبدالرحمن"></div>
+                    <div class="alumni-info"><h3>عبدالرحمن صالح مبارك باخريصة<i class="fas fa-check-circle verified-icon"></i></h3><p class="alumni-major"><i class="fas fa-language"></i> تقنية معلومات</p><p class="alumni-location"><i class="fas fa-map-marker-alt"></i>مركز أحمد لللطالب الجامعي</p><button class="btn-profile" onclick="openAlumniModal('عبدالرحمن صالح مبارك باخريصة', 'تقنية معلومات ', '2026', 'مركز أحمد', '24', 'ذكر', 'images/عبدالرحمن ‪باخريصة.jpg',`* اليوم لا نودّع التعب فقط، بل نستقبل مستقبلًا صنعناه بالصبر والإصرار. كانت رحلة مليئة بالتحديات، لكنها انتهت بفخر يستحقه كل من تعب لأجل هذا اليوم.
+
+            * لم يكن الطريق سهلًا، لكن كل خطوة فيه كانت تقرّبنا من هذا الإنجاز العظيم. اليوم نحتفل بنهاية مرحلة، وبداية حلم أكبر ينتظرنا.
+
+            * ها نحن نقف على أعتاب المستقبل بعد رحلة طويلة من السعي والاجتهاد. نحمل معنا ذكريات جميلة، وعزيمة أكبر لتحقيق ما هو قادم.
+
+            * تخرجنا اليوم ليس نهاية الطريق، بل بداية قصة جديدة نكتبها بطموحنا. كل ما مررنا به كان يستحق هذه اللحظة.
+
+            * الحمد لله على تمام النعمة واكتمال الفرحة. اليوم نطوي صفحة جميلة من حياتنا، ونفتح أبوابًا لأحلام أكبر بإذن الله.`)">عرض الملف الشخصي</button></div>
+                </div>
+                <div class="alumni-card hidden-card">
+                    <div class="alumni-img-wrapper"><img src="images/عبدالسلام باوزير ‪صورة التخرج2.jpg" alt="عبدالسلام"></div>
+                    <div class="alumni-info"><h3>عبدالسلام سالم كرامة باوزير<i class="fas fa-check-circle verified-icon"></i></h3><p class="alumni-major"><i class="fas fa-language"></i> صيدلة سريرية</p><p class="alumni-location"><i class="fas fa-map-marker-alt"></i>مركز أحمد لللطالب الجامعي</p><button class="btn-profile" onclick="openAlumniModal('عبدالسلام سالم كرامة باوزير', ' صيدلة سريرية ', '2026', 'مركز أحمد', '24', 'ذكر', 'images/عبدالسلام باوزير ‪صورة التخرج2.jpg',`إهداء تخرجي لي: 
+            أبي: الذي علمني أن الثبات يصنع المستحيل، لك الفضل بعد الله في كل ماوصلت إليه. 
+            أمي: التي كان دعاؤها يسبق خطاي ويختصر عليّ طريق الوصول، لكِ هذا الانجاز بكل مافيه من فخر
+            أخوتي: عضدي وسندي في كل حين لكم محبتي وتقديري
+            أختي: صديقة الروح وبلسم اللحظات، لكِ مني كل الامتنان
+            أصدقائي: من شاركت معهم الفرح والحزن، كامل الحب والاحترام
+            مركز أحمد: حيث بدأت الحكاية وتشكَل الحلم، كثير من الامتنان والوفاء`)">عرض الملف الشخصي</button></div>
+                </div>
+                <div class="alumni-card hidden-card">
+                    <div class="alumni-img-wrapper"><img src="images/عبدالعزيز عدنان باشغيوان .jpg" alt="عبدالعزيز"></div>
+                    <div class="alumni-info"><h3>عبدالعزيز عدنان صالح باشغيوان<i class="fas fa-check-circle verified-icon"></i></h3><p class="alumni-major"><i class="fas fa-language"></i> هندسة كيميائية</p><p class="alumni-location"><i class="fas fa-map-marker-alt"></i>مركز أحمد لللطالب الجامعي</p><button class="btn-profile" onclick="openAlumniModal('عبدالعزيز عدنان صالح باشغيوان', 'هندسة كيميائية ', '2026', 'مركز أحمد', '24', 'ذكر', 'images/عبدالعزيز عدنان باشغيوان .jpg','')">عرض الملف الشخصي</button></div>
+                </div>
+                <div class="alumni-card hidden-card">
+                    <div class="alumni-img-wrapper"><img src="images/علي بامحرز.jpg" alt="علي"></div>
+                    <div class="alumni-info"><h3>علي سالم عبدالله باحرز<i class="fas fa-check-circle verified-icon"></i></h3><p class="alumni-major"><i class="fas fa-language"></i> هندسة إلكترونية واتصالات</p><p class="alumni-location"><i class="fas fa-map-marker-alt"></i>مركز أحمد لللطالب الجامعي</p><button class="btn-profile" onclick="openAlumniModal('علي سالم عبدالله بامحرز', 'هندسة إلكترونية واتصالات', '2026', 'مركز أحمد', '24', 'ذكر', 'images/علي بامحرز.jpg',`ما توجتُ بهذا التخرج إلا بعد أن توجتني السنوات الخمس علماً وإخوةً. وهذا الفرح كله وفاء لتلك الرحلة.`)">عرض الملف الشخصي</button></div>
+                </div>
+                <div class="alumni-card hidden-card">
+                    <div class="alumni-img-wrapper"><img src="images/عمر الكاف.jpg" alt="عمر"></div>
+                    <div class="alumni-info"><h3>عمر أبو بكر صالح الكاف<i class="fas fa-check-circle verified-icon"></i></h3><p class="alumni-major"><i class="fas fa-language"></i> هندسة معمارية</p><p class="alumni-location"><i class="fas fa-map-marker-alt"></i>مركز أحمد لللطالب الجامعي</p><button class="btn-profile" onclick="openAlumniModal('عمر أبو بكر صالح الكاف', 'هندسة معمارية', '2026', 'مركز أحمد', '24', 'ذكر', 'images/عمر الكاف.jpg',`كانت رحلتي في مركز أحمد للطالب الجامعي أكثر من مجرد مرحلة دراسية، بل كانت تجربة متكاملة أسهمت في بناء شخصيتي، وصقل مهاراتي، ومنحتني بيئة محفزة للنمو الأكاديمي والشخصي، أعتز بها اليوم في بداياتي المهنية.`)">عرض الملف الشخصي</button></div>
+                </div>
+                <div class="alumni-card hidden-card">
+                    <div class="alumni-img-wrapper"><img src="images/عمر يحيى محمد الزبيدي-روب التخرج.png" alt="عمر"></div>
+                    <div class="alumni-info"><h3>عمر يحيى محمد الزبيدي<i class="fas fa-check-circle verified-icon"></i></h3><p class="alumni-major"><i class="fas fa-language"></i> هندسة معمارية</p><p class="alumni-location"><i class="fas fa-map-marker-alt"></i>مركز أحمد لللطالب الجامعي</p><button class="btn-profile" onclick="openAlumniModal('عمر يحيى محمد الزبيدي', 'هندسة معمارية', '2026', 'مركز أحمد', '24', 'ذكر', 'images/عمر يحيى محمد الزبيدي-روب التخرج.png',`كانت رحلتي أكثر من مجرد مرحلة تعليمية، بل تجربة أسهمت في تطويري وصقل مهاراتي، وكان للسكن دور مهم في توفير بيئة داعمة. تجربة أعتز بها مع بداية مسيرتي بعد التخرج`)">عرض الملف الشخصي</button></div>
+                </div>
+                <div class="alumni-card hidden-card">
+                    <div class="alumni-img-wrapper"><img src="images/محمد منصور.jpg" alt="محمد"></div>
+                    <div class="alumni-info"><h3>محمد سعيد فرج منصور<i class="fas fa-check-circle verified-icon"></i></h3><p class="alumni-major"><i class="fas fa-language"></i> هندسة كيميائية</p><p class="alumni-location"><i class="fas fa-map-marker-alt"></i>مركز أحمد لللطالب الجامعي</p><button class="btn-profile" onclick="openAlumniModal('محمد سعيد فرج منصور', 'هندسة كيميائية', '2026', 'مركز أحمد', '24', 'ذكر', 'images/محمد منصور.jpg',`بكل مشاعر الامتنان والعرفان، أُهدي شكري لكل من أسهم في إتمام مسيرتي الجامعية، وفي مقدمتهم والداي الكريمين على دعمهما وتضحياتهما، ولمؤسسة حضرموت على ما قدمته من عون ورعاية، ولكل من ساندني في هذه الرحلة؛ فجزاهم الله عني خير الجزاء.`)">عرض الملف الشخصي</button></div>
+                </div>
+                <div class="alumni-card hidden-card">
+                    <div class="alumni-img-wrapper"><img src="images/‪ علي محيسون3_١٢١.png" alt="علي"></div>
+                    <div class="alumni-info"><h3>علي محمد علي محيسون<i class="fas fa-check-circle verified-icon"></i></h3><p class="alumni-major"><i class="fas fa-language"></i> هندسة كيميائية</p><p class="alumni-location"><i class="fas fa-map-marker-alt"></i>مركز أحمد لللطالب الجامعي</p><button class="btn-profile" onclick="openAlumniModal('علي محمد علي محيسون', 'هندسة كيميائية', '2026', 'مركز أحمد', '24', 'ذكر', 'images/‪ علي محيسون3_١٢١.png',`وراء هذه اللحظة أعوامٌ من الصبر … واليوم لا يُحتفل بالنهاية، بل ببدايةٍ تستحق كل هذا الوصول.
+            وما ترونه الآن ليس إنجازًا عابرًا، بل خطوة أولى في طريقٍ طويل، عنوانه الطموح، وسنده دعوات والديّ التي لم تغب يومًا… ونهايته القمة.`)">عرض الملف الشخصي</button></div>
+                </div>
+                <div class="alumni-card hidden-card">
+                    <div class="alumni-img-wrapper"><img src="images/‪IMG_محمد باحميد ٢١١٣٣١.jpg" alt="محمد"></div>
+                    <div class="alumni-info"><h3>محمد أبو بكر هارون باحميد<i class="fas fa-check-circle verified-icon"></i></h3><p class="alumni-major"><i class="fas fa-language"></i> هندسة كيميائية</p><p class="alumni-location"><i class="fas fa-map-marker-alt"></i>مركز أحمد للطالب الجامعي</p><button class="btn-profile" onclick="openAlumniModal('محمد أبو بكر هارون باحميد', 'هندسة كيميائية', '2026', 'مركز أحمد', '23', 'ذكر', 'images/‪IMG_محمد باحميد ٢١١٣٣١.jpg',`الحمد لله الذي أتمّ الفضل وبلّغ المقصد؛ على قدر الحلم كان السعي، وعلى قدر السعي كان الوصول، رحلةٌ صاغتني من جديد وزرعت فيّ يقينًا بأن القادم أعظم بإذن الله، فجمع بين التعب والثمرة، وبين الدعاء والإجابة، فله الحمد أولًا وآخرًا، ثم الشكر لوالديّ، ولكل يدٍ امتدّت بالعون حتى اكتمل المشوار. ✨`)">عرض الملف الشخصي</button></div>
+                </div>
+                <div class="alumni-card hidden-card">
+                    <div class="alumni-img-wrapper"><img src="images/‪روب سالم حقص  التخرج.png" alt="سالم"></div>
+                    <div class="alumni-info"><h3>سالم صفوان صالح حقص<i class="fas fa-check-circle verified-icon"></i></h3><p class="alumni-major"><i class="fas fa-language"></i> تقنية معلومات</p><p class="alumni-location"><i class="fas fa-map-marker-alt"></i>مركز أحمد للطالب الجامعي</p><button class="btn-profile" onclick="openAlumniModal('سالم صفوان صالح حقص', 'تقنية معلومات', '2026', 'مركز أحمد', '24', 'ذكر', 'images/‪روب سالم حقص  التخرج.png',`خلف هذا الرداء، حكايات من الصبر وساعات من السهر، وأرواحٌ كانت لي خير سند. اليوم نلتُ ما تمنيت، والقادم أجمل بإذن الله`)">عرض الملف الشخصي</button></div>
+                </div>
+                <div class="alumni-card hidden-card">
+                    <div class="alumni-img-wrapper"><img src="images/‪صورة صلاح الدقيل.png" alt="صلاح"></div>
+                    <div class="alumni-info"><h3>صلاح عيظة سعيد الدقيل<i class="fas fa-check-circle verified-icon"></i></h3><p class="alumni-major"><i class="fas fa-language"></i> هندسة بترولية</p><p class="alumni-location"><i class="fas fa-map-marker-alt"></i>مركز أحمد للطالب الجامعي</p><button class="btn-profile" onclick="openAlumniModal('صلاح عيظة سعيد الدقيل', 'هندسة بترولية', '2026', 'مركز أحمد', '24', 'ذكر', 'images/‪صورة صلاح الدقيل.png',`تخرجتُ اليوم وفي قلبي غصة فقدك يا أبي، وفي يدي دعوات أمي التي ساندتني.. أهدي نجاحي لروحك في السماء، ولقلبكِ الطاهر يا جنة حياتي، وإلى إخوتي الذين كانوا لي نِعمَ السند والعزوة، وبوجودهم بقربي اكتملت فرحتي وطابَ مسيري.`)">عرض الملف الشخصي</button></div>
+                </div>
+                <div class="alumni-card hidden-card">
+                    <div class="alumni-img-wrapper"><img src="images/‪عبدالله عبدالمانع2.jpg" alt="عبدالله"></div>
+                    <div class="alumni-info"><h3>عبدالله علي صالح عبدالمانع<i class="fas fa-check-circle verified-icon"></i></h3><p class="alumni-major"><i class="fas fa-language"></i> طب وجراحة عامة</p><p class="alumni-location"><i class="fas fa-map-marker-alt"></i>مركز أحمد للطالب الجامعي</p><button class="btn-profile" onclick="openAlumniModal('عبدالله علي صالح عبدالمانع', 'طب وجراحة عامة ', '2026', 'مركز أحمد', '24', 'ذكر', 'images/‪عبدالله عبدالمانع2.jpg','')">عرض الملف الشخصي</button></div>
+                </div>
+                <div class="alumni-card hidden-card">
+                    <div class="alumni-img-wrapper"><img src="images/رويدا.jpeg" alt="رويدا"></div>
+                    <div class="alumni-info"><h3>رويدا حسن محمد اليزيدي<i class="fas fa-check-circle verified-icon"></i></h3><p class="alumni-major"><i class="fas fa-language"></i>تمريض</p><p class="alumni-location"><i class="fas fa-map-marker-alt"></i> مركز خديجة للطالبات</p><button class="btn-profile" onclick="openAlumniModal('رويدا حسن محمد اليزيدي', 'تمريض', '2026', 'مركز خديجة', '23', 'أنثى', '',`في هذه اللحظة، أستحضرُ كل خطوةٍ تعثرتُ بها فقمتُ أقوى... سنواتُ شكلتني قبل أن تمنحني الشهادة، وصقلت في داخلي شخصيةً قياديةً أعتز بها. أغادر اليوم ممتنة لكل تحدٍ جعلني ما أنا عليه الآن، ومستعدة لأرسم ملامح مستقبلي بكل حب وفخر`)">عرض الملف الشخصي</button></div>
+                </div>
+                <div class="alumni-card hidden-card">
+                    <div class="alumni-img-wrapper"><img src="images/زينب.jpeg" alt="زينب"></div>
+                    <div class="alumni-info"><h3>زينب محمد سالم المرفدي<i class="fas fa-check-circle verified-icon"></i></h3><p class="alumni-major"><i class="fas fa-language"></i>صيدلة عامة</p><p class="alumni-location"><i class="fas fa-map-marker-alt"></i> مركز خديجة للطالبات</p><button class="btn-profile" onclick="openAlumniModal('زينب محمد سالم المرفدي', 'صيدلة عامة', '2026', 'مركز خديجة', '23', 'أنثى', '',`في هذا المكان، لم تكن الأيام تمر كأيام عادية، بل كانت لحظات تتكوّن بهدوء وتترك أثرها العميق في الداخل. بين تفاصيل بسيطة وتحديات صامتة، تشكلت مشاعر لا تُنسى، ونمت قوة لم تكن تُرى في البداية. هنا تعلّمت كيف أواجه فسي قبل أي شيء، وكيف أحتوي ضعفي وأحوّله إلى دافع يمضي بي
+للأمام. سيبقى هذا المكان حاضرًا في القلب، ليس كذكرى عابرة، بل كجزء دافئ من حكاية لا تزال تُكتب`)">عرض الملف الشخصي</button></div>
+                </div>
+                <div class="alumni-card hidden-card">
+                    <div class="alumni-img-wrapper"><img src="images/صفاء.jpeg" alt="صفاء"></div>
+                    <div class="alumni-info"><h3>صفاء صالح أحمد المقنب<i class="fas fa-check-circle verified-icon"></i></h3><p class="alumni-major"><i class="fas fa-language"></i>طب وجراحة عامة</p><p class="alumni-location"><i class="fas fa-map-marker-alt"></i> مركز خديجة للطالبات</p><button class="btn-profile" onclick="openAlumniModal('صفاء صالح أحمد المقنب', 'طب وجراحة عامة', '2026', 'مركز خديجة', '25', 'أنثى', '',`لم يكن السكن مجرد جدرانٍ تقيّدنا، بل مساحة أعادت تشكيل شخصيتي، ومرآة عكست ما بداخلي من قدراتٍ لم أكن أراها .
+هنا بدأتُ كفتاةٍ تبحث عن مكانٍ لها بين أحلامها، تخطو بترددٍ أحياناً، وبشغفٍ كبيرٍ أحياناً أخرى...
+وأغادر اليوم وأنا طبيبةُ تعرف طريقها جيداً.
+ممتنّة بعمق لكل الأيام بما حملت، ولكل من كان سنداً ورفيقاً في كل لحظةٍ من هذه الرحلة .`)">عرض الملف الشخصي</button></div>
+                </div>
+                <div class="alumni-card hidden-card">
+                    <div class="alumni-img-wrapper"><img src="images/اليزيدي.jpeg" alt="فاطمة"></div>
+                    <div class="alumni-info"><h3>فاطمة حسين عبدالرب اليزيدي<i class="fas fa-check-circle verified-icon"></i></h3><p class="alumni-major"><i class="fas fa-language"></i>طب وجراحة عامة</p><p class="alumni-location"><i class="fas fa-map-marker-alt"></i> مركز خديجة للطالبات</p><button class="btn-profile" onclick="openAlumniModal('فاطمة حسين عبدالرب اليزيدي', 'طب وجراحة عامة', '2026', 'مركز خديجة', '25', 'أنثى', '',`هُنا بدأ الحلم ، وها أنا أغادره واقعاً يُلامسني هُنا صُقلت روحي قبل أن يُصقل علمي نضجت ملامحي بين تعبٍ وأمل
+هُنا تحوّلت أحلامي في الطب إلى حقيقةِ أمسكها بيدي اليوم عشتُ السنين العجاف ،، وسكنتني تفاصيل لا تنسى ضحكات، انكسارات، وقلوب كانت لي وطنا في غربةٍ لم تكن سهلة أغادر اليوم ... لا كطالبةِ أنهكها الطريق !!
+بل ك دكتورةٍ ممتنة لمكانٍ احتضن تعبي ، ولرفيقاتٍ كنَّ الضماد حين أثقلتني الأيام، ولبدايةٍ جديدة ... تبدأ من هُنا.`)">عرض الملف الشخصي</button></div>
+                </div>
+                <div class="alumni-card hidden-card">
+                    <div class="alumni-img-wrapper"><img src="images/الصيعري.jpeg" alt="نور"></div>
+                    <div class="alumni-info"><h3>نور محمد سعيد بن سرور<i class="fas fa-check-circle verified-icon"></i></h3><p class="alumni-major"><i class="fas fa-language"></i>هندسة غذائية</p><p class="alumni-location"><i class="fas fa-map-marker-alt"></i> مركز خديجة للطالبات</p><button class="btn-profile" onclick="openAlumniModal('نور محمد سعيد بن سرور', 'هندسة غذائية', '2026', 'مركز خديجة', '23', 'أنثى', '',`تحية شكر وإجلال لمركز لم يكن مجرد سكن بل كان بيئة داعمة وصاقلة وبانية لمواهبنا
+وكم أنا سعيدة كوني أول خريجة هندسة أغذية من مركز سكن خديجة لتخصص علوم وتكنولوجيا الأغذية`)">عرض الملف الشخصي</button></div>
+                </div>
+                <div class="alumni-card hidden-card">
+                    <div class="alumni-img-wrapper"><img src="images/لطيفة.jpeg" alt="لطفية"></div>
+                    <div class="alumni-info"><h3>لطفية صالح حسين باعباد<i class="fas fa-check-circle verified-icon"></i></h3><p class="alumni-major"><i class="fas fa-language"></i>طب وجراحة فم وأسنان</p><p class="alumni-location"><i class="fas fa-map-marker-alt"></i>مركز خديجة للطالبات</p><button class="btn-profile" onclick="openAlumniModal('لطفية صالح حسين باعباد', 'طب وجراحة فم وأسنان', '2026', 'مركز خديجة', '24', 'أنثى', '',`لم يكن مركزُ خديجة مجردَ سكنٍ أو مكانٍ جمعُنا تحت سقفٍ واحدٍ، بل كان جرانه تعلمك كيف أتحمّل المسؤولية، وكيف أصنع القرار، وكيف أقور وأدير !
+تمرُ بي السنوات في المركز مرورَ العابرين، بل تركت في داخلي أثرًا من النضجِ، وخبرةً سترافقُني ما حُييت`)">عرض الملف الشخصي</button></div>
+                </div>
+                <div class="alumni-card hidden-card">
+                    <div class="alumni-img-wrapper"><img src="images/الهنوف.jpeg" alt="الهنوف"></div>
+                    <div class="alumni-info"><h3>الهنوف فايز يحيى بلفاس<i class="fas fa-check-circle verified-icon"></i></h3><p class="alumni-major"><i class="fas fa-language"></i>تمريض</p><p class="alumni-location"><i class="fas fa-map-marker-alt"></i> مركز خديجة للطالبات</p><button class="btn-profile" onclick="openAlumniModal('الهنوف فايز يحيى بلفاس', 'تمريض', '2026', 'مركز خديجة', '24', 'أنثى', '',`فكرةً تتخلّق، وروحًا تتجلّى، وإنسانًا ينبثق من سرّه الأول.
+ثلاثة أعوامٍ لم تكن زمنًا يُعدّ، بل عمرًا آخر عشته حتى صرت بعضا من خديجة.`)">عرض الملف الشخصي</button></div>
+                </div>
+                <div class="alumni-card hidden-card">
+                    <div class="alumni-img-wrapper"><img src="images/آمال.jpeg" alt="آمال"></div>
+                    <div class="alumni-info"><h3>آمال عبيد علي بن جميع<i class="fas fa-check-circle verified-icon"></i></h3><p class="alumni-major"><i class="fas fa-language"></i>لغة عربية</p><p class="alumni-location"><i class="fas fa-map-marker-alt"></i> مركز خديجة للطالبات</p><button class="btn-profile" onclick="openAlumniModal('آمال عبيد علي بن جميع', 'لغة عربية', '2026', 'مركز خديجة', '24', 'أنثى', '',`عبرتُ هذا الدربَ بقلبي، حتى نضجتُ على مهل لا يُرى، كان دربي في مركز العلم والطموح بناءً للوعي، وصقلا للذات، ونموًا لا يُنسى في طريق النضج والإنجاز المستقبلي،وأغادره اليوم كخرّيجة ممتلئة بالامتنان، أحمل له ثناءً وافيًا، وأثرًا لا يغيب`)">عرض الملف الشخصي</button></div>
+                </div>
+                <div class="alumni-card hidden-card">
+                    <div class="alumni-img-wrapper"><img src="images/ميادة خالد باوزير.jpg" alt="ميادة"></div>
+                    <div class="alumni-info"><h3>ميادة خالد مبارك باوزير<i class="fas fa-check-circle verified-icon"></i></h3><p class="alumni-major"><i class="fas fa-language"></i>طب وجراحة عامة</p><p class="alumni-location"><i class="fas fa-map-marker-alt"></i> مركز خديجة للطالبات</p><button class="btn-profile" onclick="openAlumniModal('ميادة خالد مبارك باوزير', 'طب وجراحة عامة', '2026', 'مركز خديجة', '25', 'أنثى', '',`لم يَكن هذا المكان مكانًا نمر به،بل كان جزءًا منّا،كل زاوية فيه تشهد على حلم بدأ، وتعبٍ احتمل، ونجاحٍ ولد هنا تعلمنا أن الغربة قد تتحول إلى أنس ، إمتناننا العميق لمن جعل لنا بيئة أَمنة مُيسرة ومحفِزة حتى أصبحنا لما نحن عليه ،فعطاءه يُحفظ.
+الحمدلله الذي يسَّر البدايات، وأكمل النهايات وبلغنا الأحلام والغايات`)">عرض الملف الشخصي</button></div>
+                </div>
+                <div class="alumni-card hidden-card">
+                    <div class="alumni-img-wrapper"><img src="images/سلمى.jpeg" alt="سلمى"></div>
+                    <div class="alumni-info"><h3>سلمى حسين أحمد المقدي<i class="fas fa-check-circle verified-icon"></i></h3><p class="alumni-major"><i class="fas fa-language"></i>محاسبة</p><p class="alumni-location"><i class="fas fa-map-marker-alt"></i> مركز خديجة للطالبات</p><button class="btn-profile" onclick="openAlumniModal('سلمى حسين أحمد المقدي', 'محاسبة', '2026', 'مركز خديجة', '23', 'أنثى', '',`في أروقةِ سكني، لم أكن أجمع العلم فحسب، بل كُنت أُعيد صياغة ذاتي، هناك...تحولت التحديات إلى سمات قيادية، والدروس إلى رؤية مهنية، لأخرج اليوم ليس بشهادةٍ فقط، بل بشخصية تعتز بما أصبحت عليه`)">عرض الملف الشخصي</button></div>
+                </div>
+                <div class="alumni-card hidden-card">
+                    <div class="alumni-img-wrapper"><img src="images/بلقيس.jpeg" alt="بلقيس"></div>
+                    <div class="alumni-info"><h3>بلقيس عوض صالح العامري<i class="fas fa-check-circle verified-icon"></i></h3><p class="alumni-major"><i class="fas fa-language"></i>هندسة معمارية</p><p class="alumni-location"><i class="fas fa-map-marker-alt"></i> مركز خديجة للطالبات</p><button class="btn-profile" onclick="openAlumniModal('بلقيس عوض صالح العامري', 'هندسة معمارية', '2026', 'مركز خديجة', '25', 'أنثى', '',`قد جعلها ربي حقًا،
+بعد خمس سنواتٍ شداد، مليئةٍ بالتعب والجهد،
+لم يكن مركز خديجة مجرد مكان أقيم فيه، بل كان وطنًا صغيرًا احتضن أيامي، وشهد على تعبي وسهري وأحلامي.
+كم من ليلةٍ قلت فيها: محال أن أصل، واليوم ألامس حلمي بأعينٍ دامعة، وقلبٍ فخور.
+فالحمد لله الذي جعل البدايات صعبة، والنهايات جميلة.`)">عرض الملف الشخصي</button></div>
+                </div>
+                <div class="alumni-card hidden-card">
+                    <div class="alumni-img-wrapper"><img src="images/جواهر محمد التميمي.jpg" alt="جواهر"></div>
+                    <div class="alumni-info"><h3>جواهر محمد صالح التميمي<i class="fas fa-check-circle verified-icon"></i></h3><p class="alumni-major"><i class="fas fa-language"></i>نظم معلومات إدارية</p><p class="alumni-location"><i class="fas fa-map-marker-alt"></i> مركز خديجة للطالبات</p><button class="btn-profile" onclick="openAlumniModal('جواهر محمد صالح التميمي', 'نظم معلومات إدارية', '2026', 'مركز خديجة', '23', 'أنثى', '',`مركز خديجة لم يكن مجرد سكنٍ للنوم والأكل، بل كان بيتا يحتضن تفاصيلنا،
+ومدرسة علمتنا ما لا يُدرّس، ومرآةً رأينا فيها أنفسنا بصدق،
+ومنها بدأنا نكبر... حتى صرنا ما نحن عليه اليوم`)">عرض الملف الشخصي</button></div>
+                </div>
+                <div class="alumni-card hidden-card">
+                    <div class="alumni-img-wrapper"><img src="images/فاطمة عادل باعمر.jpg" alt="فاطمة"></div>
+                    <div class="alumni-info"><h3>فاطمة عادل صالح باعمر<i class="fas fa-check-circle verified-icon"></i></h3><p class="alumni-major"><i class="fas fa-language"></i>مختبرات طبية</p><p class="alumni-location"><i class="fas fa-map-marker-alt"></i> مركز خديجة للطالبات</p><button class="btn-profile" onclick="openAlumniModal('فاطمة عادل صالح باعمر', 'مختبرات طبية', '2026', 'مركز خديجة', '24', 'أنثى', '',`بوهج استمدّ نوره من ثنايا اليقين، أشرقت في سماء التمام.
+ممتنة لخديجة عُمرًا، وانتماءً، وحياة.`)">عرض الملف الشخصي</button></div>
+                </div>
+            </div>
+
+            <div class="load-more-container animate-on-scroll" id="load-more-wrapper">
+                <button class="btn-load-more" onclick="showAllAlumni()">استكشاف المزيد من الخريجين <i class="fas fa-arrow-left"></i></button>
+            </div>
+
+            <br>
+            <div class="grad-stats-banner animate-on-scroll">
+                <div class="stats-banner-grid">
+                    <div class="progress-section">
+                        <div class="section-title-inline">
+                            <i class="fas fa-chart-bar" style="color: var(--gold);"></i>
+                            <h3 style="color: white; margin-right: 10px;">توزيع الخريجين حسب التخصصات</h3>
+                        </div>
+                        
+                        <div class="progress-item">
+                            <div class="progress-labels"><span>الطب والعلوم الصحية</span><span>٣٥٪</span></div>
+                            <div class="progress-bar-bg"><div class="progress-fill" style="width: 35%; background: var(--gold);"></div></div>
+                        </div>
+                        <div class="progress-item">
+                            <div class="progress-labels"><span>الهندسة والعمارة</span><span>٣٠٪</span></div>
+                            <div class="progress-bar-bg"><div class="progress-fill" style="width: 30%; background: #a8e6cf;"></div></div>
+                        </div>
+                        <div class="progress-item">
+                            <div class="progress-labels"><span>تقنية المعلومات والذكاء الاصطناعي</span><span>٢٢٪</span></div>
+                            <div class="progress-bar-bg"><div class="progress-fill" style="width: 22%; background: #a8e6cf;"></div></div>
+                        </div>
+                        <div class="progress-item">
+                            <div class="progress-labels"><span>تخصصات أخرى</span><span>١٣٪</span></div>
+                            <div class="progress-bar-bg"><div class="progress-fill" style="width: 13%; background: #a8e6cf;"></div></div>
+                        </div>
+
+                        <div class="gender-stats">
+                            <div class="gender-item"><div class="circle-chart">٤٥٪</div><span>إناث<br><small>توزيع الجنس</small></span></div>
+                            <div class="gender-item"><div class="circle-chart gold-border">٥٥٪</div><span>ذكور<br><small>توزيع الجنس</small></span></div>
+                        </div>
+                    </div>
+
+                    <div class="numbers-section">
+                        <div class="big-number">25</div>
+                        <h3 class="numbers-title">عاماً من العطاء الأكاديمي</h3>
+                        <div class="numbers-row">
+                            <div><strong>+25</strong><br><span>خريج سنوياً</span></div>
+                            <div><strong>+15</strong><br><span>مديرية مستفيدة</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+    </div>
+
+    <div id="dashboard-view" class="view-section">
+        <section class="container" style="padding-top: 120px;">
+            
+            <div class="dashboard-header animate-on-scroll">
+                <h1>لوحة البيانات والنمو الأكاديمي</h1>
+                <p>استعراض شامل لمسيرة ٢٥ عاماً من العطاء الأكاديمي وتخريج الكوادر الوطنية في مختلف التخصصات العلمية.</p>
+            </div>
+
+            <div class="stats-4-grid animate-on-scroll delay-1">
+                <div class="stat-card">
+                    <div class="stat-icon" style="color: #0f6c51; background: #e6f2ef;"><i class="fas fa-graduation-cap"></i></div>
+                    <h3>إجمالي الخريجين</h3>
+                    <div class="stat-number">+600</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon" style="color: #636e72; background: #f1f2f6;"><i class="fas fa-users"></i></div>
+                    <h3>الطلاب الحاليين</h3>
+                    <div class="stat-number">+80</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon" style="color: #d99645; background: #fdf5eb;"><i class="fas fa-building"></i></div>
+                    <h3>السكنات الطلابية</h3>
+                    <div class="stat-number">2</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon" style="color: #0f6c51; background: #e6f2ef;"><i class="fas fa-chart-line"></i></div>
+                    <h3>نسبة التخرج</h3>
+                    <div class="stat-number">95%</div>
+                </div>
+            </div>
+
+            <div class="charts-row animate-on-scroll delay-2">
+                <div class="chart-card donut-chart-container">
+                    <div class="chart-header">
+                        <h3>توزيع التخصصات</h3>
+                        <p>نسب مئوية حسب الكليات</p>
+                    </div>
+                    <div style="position: relative; height: 250px; width: 100%; display: flex; justify-content: center;">
+                        <canvas id="majorsChart"></canvas>
+                        <div class="donut-inner-text">
+                            <strong>٤ فئات</strong>
+                            <span>أكاديمية</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="chart-card">
+                    <div class="chart-header flex-between-header">
+                        <div>
+                            <h3>نمو عدد الخريجين (2002 - 2025)</h3>
+                            <p>تحليل تصاعدي لأعداد الخريجين السنوي</p>
+                        </div>
+                        <span class="badge-light">تراكمي</span>
+                    </div>
+                    <div style="position: relative; height: 250px; width: 100%;">
+                        <canvas id="growthChart"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <div class="chart-card animate-on-scroll delay-2" style="margin-top: 20px;">
+                <div class="chart-header flex-between-header">
+                    <div>
+                        <h3>إرتفاع نسبة الخريجين على مدى الأعوام</h3>
+                        <p>مقارنة إرتفاع نسبة الخريجين على مدى الأعوام</p>
+                    </div>
+                </div>
+                <div style="position: relative; height: 200px; width: 100%;">
+                    <canvas id="yearsChart"></canvas>
+                </div>
+            </div>
+
+            <div class="cta-banner animate-on-scroll delay-2">
+                <div class="cta-content">
+                    <span class="cta-subtitle">رؤيتنا للمستقبل</span>
+                    <h2>نبني مجتمعاً علمياً يزدهر بالعطاء والتميز</h2>
+                    <p>نحن لا نقدم سكناً فحسب، بل نبني بيئة محفزة تساعد الطلاب على تحقيق أقصى طموحاتهم العلمية والمهنية.</p>
+                </div>
+                <div class="cta-bg-circles"></div>
+            </div>
+
+        </section>
+    </div>
+
+    <footer class="rich-footer">
+        <div class="container footer-grid">
+            <div class="footer-col brand-col">
+                <h3 class="footer-logo">مركزي أحمد وخديجة</h3>
+                <p>بيئة تعليمية تتجاوز مفهوم السكن التقليدي، نصنع قادة المستقبل.</p>
+            </div>
+            <div class="footer-col">
+                <h4>روابط سريعة</h4>
+                <ul>
+                    <li><a href="#" onclick="switchView('main-view')">الرئيسية</a></li>
+                    <li><a href="#about" onclick="switchView('main-view')">عن المؤسسة</a></li>
+                    <li><a href="#">دليل الخريجين</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>المراكز</h4>
+                <ul>
+                    <li><a href="#" onclick="switchView('ahmed-view')">مركز أحمد للطالب الجامعي</a></li>
+                    <li><a href="#" onclick="switchView('khadija-view')">مركز خديجة للطالبات</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>تواصل معنا</h4>
+                <ul class="contact-list-footer">
+                    <li><i class="fas fa-map-marker-alt"></i> حضرموت - المكلا</li>
+                    <li><i class="fas fa-phone"></i>00967734991193</li>
+                    <li><i class="fas fa-envelope"></i> hadhramout-foundation.org/</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container flex-between">
+                <div class="footer-links-small">
+                    <a href="https://fcode7.github.io/Our-website/">future Code</a>
+                    <a href="#">Privacy Policy</a>
+                </div>
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/khadijah_center?igsh=MTNnMTA4MWRieGQ4OQ=="><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.instagram.com/ahmed.center96?igsh=MTN6MmlvcnNjOWFjOQ=="><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.instagram.com/hadhramoutfoun?igsh=OHVjOTRxMmY1dTIz"><i class="fab fa-instagram"></i></a>
+                </div>
+                <div class="copy-right-bold">
+                    <strong>HADRAMOUT FOUNDATION</strong><br>
+                    <span style="font-size:0.8rem; color:#888;">© 2026 Made With Develop By Future Code</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div id="alumni-modal" class="modal-overlay">
+        <div class="modal-content">
+            <button class="close-modal" onclick="closeAlumniModal()">&times;</button>
+            
+            <div class="modal-body">
+                <div class="modal-info-side">
+                    <h2 id="modal-name"></h2>
+                    <h4 id="modal-major">هندسة حاسوب</h4>
+                    
+                    <div class="modal-grid-info">
+                        <div class="info-item">
+                            <span class="info-label">سنة التخرج</span>
+                            <strong id="modal-year">٢٠٢٣ <i class="far fa-calendar-alt"></i></strong>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">مركز السكن</span>
+                            <strong id="modal-center">مركز أحمد <i class="far fa-building"></i></strong>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">العمر</span>
+                            <strong id="modal-age"> <i class="far fa-user"></i></strong>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">الجنس</span>
+                            <strong id="modal-gender"> <i class="fas fa-mars"></i></strong>
+                        </div>
+                    </div>
+
+                    <div class="modal-quote">
+                        <i class="fas fa-quote-right quote-icon"></i>
+                        <p id="modal-quote-text">"كانت رحلتي في مؤسسة صرح العلماء أكثر من مجرد مسار أكاديمي، لقد كانت بيئة لبناء الشخصية وصقل المهارات القيادية التي أعتز بها اليوم في مسيرتي المهنية."</p>
+                    </div>
+
+                    <div class="modal-actions">
+                        <button class="btn btn-print"><i class="fas fa-print"></i> طباعة الملف الشخصي</button>
+                        <button class="btn btn-close-outline" onclick="closeAlumniModal()">إغلاق</button>
+                    </div>
+                </div>
+
+                <div class="modal-image-side">
+                    <div class="modal-img-container">
+                        <img id="modal-img" src="" alt="Profile">
+                    </div>
+                    <div class="modal-badge">
+                        <i class="fas fa-award"></i> خريج متميز
+                    </div>
+                    <div class="modal-socials">
+                        <i class="fas fa-link"></i>
+                        <i class="fas fa-share-alt"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/chart.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
