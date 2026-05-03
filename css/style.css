@@ -488,7 +488,7 @@ html { scroll-behavior: smooth; }
 }
 
 .ahmed-bg {
-    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url('/images/صورة مركز أحمد.webp');
+    background-image: linear-gradient(rgba(15, 108, 82, 0), rgba(9, 71, 52, 0)), url('/images/صورة مركز أحمد.webp');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
