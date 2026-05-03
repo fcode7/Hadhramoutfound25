@@ -350,8 +350,9 @@ async function shareAlumniProfile() {
 
     try {
         const canvas = await html2canvas(modalContent, {
-            scale: 3, 
+            scale: 5, 
             useCORS: true, 
+            allowTaint: true,
             backgroundColor: '#ffffff',
             scrollY: -window.scrollY,
             windowWidth: document.documentElement.offsetWidth,
