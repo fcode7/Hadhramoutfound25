@@ -336,6 +336,34 @@ function closeAlumniModal() {
     setTimeout(() => modal.style.display = 'none', 300);
 }
 
+async function shareAlumniProfile() {
+    const name = document.getElementById('modal-name').innerText;
+    const major = document.getElementById('modal-major').innerText;
+    const shareTitle = 'ملف تخرج: ' + name;
+    const shareText = `تعرف على الخريج المتميز ${name}، تخصص ${major}. \nشاهد ملفه الشخصي وكلمة تخرجه هنا:`;
+    const shareUrl = window.location.href;
+
+    if (navigator.share) {
+        try {
+            await navigator.share({
+                title: shareTitle,
+                text: shareText,
+                url: shareUrl
+            });
+            console.log('تمت المشاركة بنجاح');
+        } catch (error) {
+            console.log('تم إلغاء المشاركة أو حدث خطأ:', error);
+        }
+    } else {
+        const textToCopy = `${shareTitle}\n${shareText}\n${shareUrl}`;
+        navigator.clipboard.writeText(textToCopy).then(() => {
+            alert('تم نسخ تفاصيل الخريج والرابط للحافظة! يمكنك الآن لصقها في واتساب أو أي منصة أخرى.');
+        }).catch(err => {
+            console.error('فشل في نسخ النص: ', err);
+        });
+    }
+}
+
 window.onclick = function(event) {
     const modal = document.getElementById('alumni-modal');
     if (event.target == modal) {
