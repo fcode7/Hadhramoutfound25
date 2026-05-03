@@ -352,20 +352,27 @@ async function shareAlumniProfile() {
         const canvas = await html2canvas(modalContent, {
             scale: 3, 
             useCORS: true, 
-            backgroundColor: '#ffffff', 
+            backgroundColor: '#ffffff',
+            scrollY: -window.scrollY,
+            windowWidth: document.documentElement.offsetWidth,
+            windowHeight: document.documentElement.offsetHeight,
             onclone: (clonedDoc) => {
+                const clonedModal = clonedDoc.querySelector('.modal-content');
+                if (clonedModal) {
+                    clonedModal.style.maxHeight = 'none';
+                    clonedModal.style.height = 'auto';
+                    clonedModal.style.overflow = 'visible';
+                    clonedModal.style.position = 'relative';
+                    clonedModal.style.boxShadow = 'none'; 
+                    clonedModal.style.transform = 'none'; 
+                    clonedModal.style.margin = '0'; 
+                }
+
                 const clonedActions = clonedDoc.querySelector('.modal-actions');
                 if (clonedActions) clonedActions.style.display = 'none';
 
                 const closeIcon = clonedDoc.querySelector('.fa-times, .close, button[onclick="closeAlumniModal()"]');
                 if (closeIcon) closeIcon.style.display = 'none';
-
-                const clonedModal = clonedDoc.querySelector('.modal-content');
-                if (clonedModal) {
-                    clonedModal.style.boxShadow = 'none'; 
-                    clonedModal.style.transform = 'none'; 
-                    clonedModal.style.margin = '0'; 
-                }
             }
         });
 
