@@ -337,30 +337,52 @@ function closeAlumniModal() {
 }
 
 async function shareAlumniProfile() {
+    const modalContent = document.querySelector('.modal-content'); 
     const name = document.getElementById('modal-name').innerText;
-    const major = document.getElementById('modal-major').innerText;
-    const shareTitle = 'ملف تخرج: ' + name;
-    const shareText = `تعرف على الخريج المتميز ${name}، تخصص ${major}. \nشاهد ملفه الشخصي وكلمة تخرجه هنا:`;
-    const shareUrl = window.location.href;
+    const shareText = `نحتفي اليوم بخريجنا المتميز ${name}. \nشاهد مسيرته وكلمته الملهمة عبر الرابط:`;
+    const shareUrl = window.location.href; 
+    const shareBtn = document.querySelector('.btn-print');
+    const originalBtnText = shareBtn.innerHTML;
+    shareBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> جاري التجهيز...';
+    shareBtn.disabled = true;
 
-    if (navigator.share) {
-        try {
-            await navigator.share({
-                title: shareTitle,
-                text: shareText,
-                url: shareUrl
-            });
-            console.log('تمت المشاركة بنجاح');
-        } catch (error) {
-            console.log('تم إلغاء المشاركة أو حدث خطأ:', error);
-        }
-    } else {
-        const textToCopy = `${shareTitle}\n${shareText}\n${shareUrl}`;
-        navigator.clipboard.writeText(textToCopy).then(() => {
-            alert('تم نسخ تفاصيل الخريج والرابط للحافظة! يمكنك الآن لصقها في واتساب أو أي منصة أخرى.');
-        }).catch(err => {
-            console.error('فشل في نسخ النص: ', err);
+    try {
+        const canvas = await html2canvas(modalContent, {
+            scale: 2, 
+            useCORS: true, 
+            backgroundColor: '#ffffff', 
+            removeContainer: true 
         });
+
+        const imageDataUrl = canvas.toDataURL('image/png');
+
+        const response = await fetch(imageDataUrl);
+        const blob = await response.blob();
+        const file = new File([blob], `alumni-${name}.png`, { type: 'image/png' });
+
+        const shareData = {
+            title: `بطاقة خريج: ${name}`,
+            text: `${shareText}\n${shareUrl}`, 
+            files: [file] 
+        };
+
+        if (navigator.canShare && navigator.canShare(shareData)) {
+            await navigator.share(shareData);
+            console.log('تمت مشاركة الصورة والنص بنجاح');
+        } else {
+            const link = document.createElement('a');
+            link.download = `alumni-${name}.png`;
+            link.href = imageDataUrl;
+            link.click();
+            alert('متصفحك لا يدعم مشاركة الصور مباشرة. لقد قمنا بتحميل بطاقة الخريج كصورة لجهازك، يمكنك الآن مشاركتها يدوياً!');
+        }
+
+    } catch (error) {
+        console.error('حدث خطأ أثناء محاولة المشاركة:', error);
+        alert('عذراً، حدث خطأ غير متوقع أثناء تجهيز البطاقة للمشاركة.');
+    } finally {
+        shareBtn.innerHTML = originalBtnText;
+        shareBtn.disabled = false;
     }
 }
 
