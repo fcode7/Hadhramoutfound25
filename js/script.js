@@ -339,8 +339,10 @@ function closeAlumniModal() {
 async function shareAlumniProfile() {
     const modalContent = document.querySelector('.modal-content'); 
     const name = document.getElementById('modal-name').innerText;
+    
     const shareText = `نحتفي اليوم بخريجنا المتميز ${name}. \nشاهد مسيرته وكلمته الملهمة عبر الرابط:`;
     const shareUrl = window.location.href; 
+
     const shareBtn = document.querySelector('.btn-print');
     const originalBtnText = shareBtn.innerHTML;
     shareBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> جاري التجهيز...';
@@ -348,10 +350,23 @@ async function shareAlumniProfile() {
 
     try {
         const canvas = await html2canvas(modalContent, {
-            scale: 2, 
+            scale: 3, 
             useCORS: true, 
             backgroundColor: '#ffffff', 
-            removeContainer: true 
+            onclone: (clonedDoc) => {
+                const clonedActions = clonedDoc.querySelector('.modal-actions');
+                if (clonedActions) clonedActions.style.display = 'none';
+
+                const closeIcon = clonedDoc.querySelector('.fa-times, .close, button[onclick="closeAlumniModal()"]');
+                if (closeIcon) closeIcon.style.display = 'none';
+
+                const clonedModal = clonedDoc.querySelector('.modal-content');
+                if (clonedModal) {
+                    clonedModal.style.boxShadow = 'none'; 
+                    clonedModal.style.transform = 'none'; 
+                    clonedModal.style.margin = '0'; 
+                }
+            }
         });
 
         const imageDataUrl = canvas.toDataURL('image/png');
@@ -368,17 +383,15 @@ async function shareAlumniProfile() {
 
         if (navigator.canShare && navigator.canShare(shareData)) {
             await navigator.share(shareData);
-            console.log('تمت مشاركة الصورة والنص بنجاح');
         } else {
             const link = document.createElement('a');
             link.download = `alumni-${name}.png`;
             link.href = imageDataUrl;
             link.click();
-            alert('متصفحك لا يدعم مشاركة الصور مباشرة. لقد قمنا بتحميل بطاقة الخريج كصورة لجهازك، يمكنك الآن مشاركتها يدوياً!');
         }
 
     } catch (error) {
-        console.error('حدث خطأ أثناء محاولة المشاركة:', error);
+        console.error(error);
         alert('عذراً، حدث خطأ غير متوقع أثناء تجهيز البطاقة للمشاركة.');
     } finally {
         shareBtn.innerHTML = originalBtnText;
