@@ -242,7 +242,7 @@ function initCharts() {
                 labels: ['2002', '2005', '2010', '2015', '2020', '2025'],
                 datasets: [{
                     label: 'عدد الخريجين',
-                    data: [100, 250, 350, 450, 600, 650],
+                    data: [100, 250, 350, 450, 600, 850],
                     borderColor: '#0f6c51',
                     backgroundColor: 'rgba(15, 108, 81, 0.1)',
                     borderWidth: 4,
